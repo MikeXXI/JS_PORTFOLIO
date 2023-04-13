@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>    
+    <script type="text/javascript">
+
+        $(document).keydown(function (e) {
+            switch (e.which) {
+
+                case 37:    // flèche gauche
+                    if ($(".mario").position().left > 350) {
+                        $(".mario").finish().animate({
+                            left: "-=15"
+                        });
+                    };
+
+                    break;
+                case 38:    // flèche haut
+
+                    $(".mario").finish().animate({
+                        top: "-=250"
+                    });
+                    if ($(".mario").position().top <
+                        400 && $(".mario").position().left >
+                        425 && $(".mario").position().left < 500) {
+                        $("#open1").attr("aria-hidden", "false");
+                        $("#open1").attr("tabindex", "0");
+                        $("#open1").focus();
+                    };
+                    if ($(".mario").position().top <
+                        400 && $(".mario").position().left >
+                        695 && $(".mario").position().left < 770) {
+                        $("#open2").attr("aria-hidden", "false");
+                        $("#open2").attr("tabindex", "0");
+                        $("#open2").focus();
+                    };
+                    if ($(".mario").position().top <
+                        400 && $(".mario").position().left >
+                        965 && $(".mario").position().left < 1040) {
+                        $("#open3").attr("aria-hidden", "false");
+                        $("#open3").attr("tabindex", "0");
+                        $("#open3").focus();
+                    };
+                    if ($(".mario").position().top <
+                        400 && $(".mario").position().left >
+                        1235 && $(".mario").position().left < 1310) {
+                        $("#open4").attr("aria-hidden", "false");
+                        $("#open4").attr("tabindex", "0");
+                        $("#open4").focus();
+                    };
+
+                    $(".mario").finish().animate({
+                        top: "+=250",
+                    });
+                    break;
+                case 39:    // flèche droite
+                    if ($(".mario").position().left < 1350) {
+                        $(".mario").finish().animate({
+                            left: "+=15"
+                        });
+                    };
+                    break;
+            }
+        });
+    </script>
+</head>
+
+<body style="background-image: url(nuage.avif); margin-left: 0px; margin-bottom: 0px;">
+    <div id="overlay1" class="overlay"></div>
+    <div id="modal1" class="modal">
+        <span id="modal-btn1" class="material-symbols-outlined">
+            X
+        </span>
+
+        <div class="modalContenue">
+            <center>
+                <h1>Bio</h1>
+            </center>
+            </br>
+            <p>Je suis âgé de 30 ans et étudiant en bachelor 3 informatique option développement, je suis passionné et déterminé.
+                Après une expérience de développeur informatique, j’ai choisi l'alternance à "Sophia Ynov Campus" pour approfondir mes compétences dans le domaine.
+                Je suis aussi en poste au même endroit, en tant que Mentor informatique!</p>
+            <p>Toujours à la recherche de nouvelles technologies et de nouveaux projets pour nourrir ma soif de savoir.
+                J’aime particulièrement travailler sur des projets complexes et me challengers pour sans cesse me dépasser et me perfectionner.</p>
+            <p>En dehors de l'informatique, je suis également un grand sportif et un passionné d'arts martiaux.
+                Je passe une grande partie de mon temps libre à pratiquer diverses activités sportives.
+                Je considère que la pratique sportive est essentielle pour maintenir un équilibre entre le corps et l'esprit, ce qui me permet de rester concentré et motivé dans mes projets.</p>
+        </div>
+    </div>
+    <!-- <div id="overlay2" class="overlay"></div>
+    <div id="modal2" class="modal">
+        <span id="modal-btn2" class="material-symbols-outlined">
+            X
+        </span>
+
+        <div class="modalContenue">
+            <center>
+                <h1>Projet</h1>
+            </center>
+            </br>
+            <p>Voici une liste de mes projets réalisés en cours ou en dehors de l'école.</p>
+            </div>
+    </div> -->
+    <!-- <div id="overlay4" class="overlay"></div>
+    <div id="modal4" class="modal">
+        <span id="modal-btn4" class="material-symbols-outlined">
+            X
+        </span>
+
+        <div class="modalContenue">
+            <center>
+                <h1>Contact</h1>
+            </center>
+            </br>
+            <p>Voici les divers moyen de me joindre :</p>
+        </div> -->
+    </div>
+    <main id="container">
+        <div class="haut">
+            <img src="piece_bio.webp" id="open1" class="open" aria-hidden="true"></img>
+            <div class="bloc">
+                <img src="bloc_surprise.webp" alt="bloc">
+            </div>
+            <img src="piece_projet.webp" id="open2" class="open" aria-hidden="true"></img>
+            <div class="bloc">
+                <img src="bloc_surprise.webp" alt="bloc">
+            </div>
+            <a href="CV2022.pdf"><img src="piece_cv.webp" id="open3" class="open" aria-hidden="true"></img></a>
+            <div class="bloc">
+                <img src="bloc_surprise.webp" alt="bloc">
+            </div>
+            <img src="piece_contact.webp" id="open4" class="open" aria-hidden="true"></img>
+            <div class="bloc">
+                <img src="bloc_surprise.webp" alt="bloc">
+                <!-- <div id="bloc4">
+                        <p>Voici la modal 4 !</p>
+                    </div> -->
+            </div>
+            <div class="mario">
+            </div>
+        </div>
+    </main>
+    <!-- <div id="dialog4" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1">
+        <div id="dialog4-content">
+            <p>Voici la modal 4 !</p>
+            <button id="close4" aria-label="Close this dialog window">Close</button>
+        </div>
+    </div> -->
+</body>
+
+</html>
+<script src="script.js"></script>
